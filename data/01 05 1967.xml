@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/Vault/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/Vault/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main">The negro on campus</title>
+            <title type="sub">Digital Edition</title>
+            <author>
+                <persName xml:id="JLU">Jessica H. Lu</persName>
+                <orgName xml:id="AADHUM">African American History, Culture, and Digital Humanities (AADHum)</orgName>
+            </author>
+            <respStmt> <!-- Take note that each person/responsibility gets its own responsibility statement. Responsibility statements provide an opportunity to make visible the workflow and shared labor of a project -->
+                <resp>Encoded by</resp>
+                <persName ref="#JLU">Jessica H. Lu</persName>
+            </respStmt>
+            <respStmt>
+                <resp>Edited by staff at</resp>
+                <orgName xml:id="MITH">Maryland Institute for Technology in the Humanities (MITH)</orgName>
+            </respStmt>
+            <respStmt>
+                <resp>Original TEI template provided by</resp>
+                <persName xml:id="RV">Raffaele Viglianti, PhD</persName>
+            </respStmt>
+            <respStmt>
+                <resp>Student newspapers archived and provided by</resp>
+                <orgName xml:id="UA">University Archives
+                    <placeName>University of Maryland
+                        <settlement>College Park</settlement>
+                        <region>Maryland</region>
+                    </placeName>
+                </orgName>
+            </respStmt>
+            <funder ref="https://mellon.org">The Andrew W. Mellon Foundation</funder>
+         </titleStmt>
+         <editionStmt>
+             <edition n="1">First edition</edition>
+         </editionStmt>
+         <extent>
+             <measure unit="pages" quantity="2">2 partial pages of original source material</measure>
+         </extent>
+         <publicationStmt>
+             <publisher>
+                 <orgName ref="#AADHUM">African American History, Culture, and Digital Humanities (AADHum)</orgName>
+             </publisher>
+             <pubPlace>
+                 <settlement>College Park</settlement>
+                 <region>Maryland</region>
+             </pubPlace>
+             <date when="2017-11-13">November 13, 2017</date>
+             <availability status="free"> <!-- For digital research projects, another common status may be "restricted," which would be further explained immediately below as "Available for academic research purposes only." -->
+                 <p>In the public domain.</p>
+             </availability>
+         </publicationStmt>
+         <seriesStmt>
+             <title>Machine-Readable Texts for the Study of Freedom in UMD Student Newspaper Coverage of African American Life</title>
+             <respStmt>
+                 <resp>Compiled and edited by</resp>
+                 <persName ref="#JLU">Jessica H. Lu</persName>
+             </respStmt>
+         </seriesStmt>
+         <sourceDesc> <!-- Remember, this provides information about the original source(s) from which the digital text is derived. -->
+             <listBibl>
+             <biblStruct>
+                 <analytic>
+                     <title>The negro on campus</title>
+                     <author>
+                         <persName xml:id="HG">Hollace Goldberg</persName>
+                     </author>
+                 </analytic>
+                 <monogr>
+                     <title level="j">The Diamondback</title>
+                     <imprint>
+                         <publisher>Maryland Media Inc.</publisher>
+                         <pubPlace>
+                             <region>College Park</region>
+                             <settlement>Maryland</settlement>
+                         </pubPlace>
+                         <date when="1967-01-05">January 5, 1967</date>
+                     </imprint>
+                     <biblScope unit="volume">59</biblScope>
+                     <biblScope unit="number">51</biblScope>
+                     <biblScope unit="page">1 and 3</biblScope>
+                 </monogr>
+             </biblStruct>
+             <bibl xml:id="LU">
+                 <title>Reckoning with Freedom: Legacies of Exclusion, Dehumanization, and Black Resistance in the Rhetoric of the Freedmen's Bureau</title>
+                 <author>
+                     <persName ref="#JLU">Jessica H. Lu</persName>
+                 </author>
+             </bibl>
+             <bibl>
+                 <interpGrp resp="#LU" type="idea"> <!-- Search for "interGrp" in the TEI guidelines to learn more about how we can use this element to conduct an ideational analysis! -->
+                     <desc>Ideational analysis of freedom.</desc>
+                     <interp xml:id="LAND">Land</interp>
+                     <interp xml:id="LAB">Labor</interp>
+                     <interp xml:id="EDU">Education</interp>
+                     <interp xml:id="REL">Relief</interp>
+                     <interp xml:id="JUST">Justice</interp>
+                 </interpGrp>
+             </bibl>
+             </listBibl>
+        </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+          <editorialDecl>
+              <p>All typographical errors have been preserved. When possible, suggested corrections are provided.</p>
+              <p>Structural formatting has been partially preserved. Page jumps and paragraphs have been retained, along with most line breaks. However, column breaks have not.</p>
+              <hyphenation eol="all">
+                 <p>All end-of-line hyphenation has been regularized.</p>
+             </hyphenation>
+          </editorialDecl>
+          <projectDesc>
+              <p>This project aims to provide students, scholars, and practitioners with a basic introduction to the Text Encoding Initiative (TEI), in the hopes that XML training will help foster critical scholarship at the intersections of African American history, culture, and digital humanities. This free training has been provided as part of the <date from="2017" to ="2018">2017-2018</date><orgName ref="#AADHUM">AADHum</orgName> series of digital humanities incubators.</p> <!-- Use this space to craft an abstract that defines or describes the scope and purpose of the project -->
+          </projectDesc>
+      </encodingDesc>
+      <profileDesc>
+          <langUsage>
+              <language ident="en-US">United States English</language>
+          </langUsage>
+          <particDesc>
+              <listOrg>
+                  <org>
+                      <orgName xml:id="UMD" ref="https://lccn.loc.gov/n79054042">University of Maryland, College Park</orgName>
+                      <idno type="LCAF">n79054042</idno>
+                      <placeName>
+                          <settlement>College Park</settlement>
+                          <region>Maryland (<abbr>M.D.</abbr>)</region>
+                          <country>United States of America (<abbr>U.S.A.</abbr>)</country>
+                      </placeName>
+                  </org>
+                  <org>
+                      <orgName xml:id="UMDLAW" ref="https://lccn.loc.gov/n85094063">University of Maryland, School of Law</orgName>
+                      <idno type="LCAF">n85094063</idno>
+                      <placeName>
+                          <settlement>Baltimore</settlement>
+                          <region>Maryland (<abbr>M.D.</abbr>)</region>
+                          <country>United States of America (<abbr>U.S.A.</abbr>)</country>
+                      </placeName>
+                  </org>
+                  <org>
+                      <orgName xml:id="UMDPHARM" ref="https://lccn.loc.gov/no2009018306">University of Maryland, School of Pharmacy</orgName>
+                      <idno type="LCAF">no2009018306</idno>
+                      <placeName>
+                          <settlement>Baltimore</settlement>
+                          <region>Maryland (<abbr>M.D.</abbr>)</region>
+                          <country>United States of America (<abbr>U.S.A.</abbr>)</country>
+                      </placeName>
+                  </org>
+                  <org>
+                      <orgName xml:id="UMDDENT" ref="https://lccn.loc.gov/n88095497">University of Maryland, School of Dentistry</orgName>
+                      <idno type="LCAF">n88095497</idno>
+                      <placeName>
+                          <settlement>Baltimore</settlement>
+                          <region>Maryland (<abbr>M.D.</abbr>)</region>
+                          <country>United States of America (<abbr>U.S.A.</abbr>)</country>
+                      </placeName>
+                  </org>
+                  <org>
+                      <orgName xml:id="UMDNURS" ref="https://lccn.loc.gov/no2009017751">University of Maryland, School of Nursing</orgName>
+                      <idno>no2009017751</idno>
+                      <placeName>
+                          <settlement>Baltimore</settlement>
+                          <region>Maryland (<abbr>M.D.</abbr>)</region>
+                          <country>United States of America (<abbr>U.S.A.</abbr>)</country>
+                      </placeName>
+                  </org>
+                  <org>
+                      <orgName xml:id="HOW" ref="https://lccn.loc.gov/n79064543">Howard University</orgName>
+                      <idno type="LCAF">n79064543</idno>
+                      <placeName>
+                          <settlement>Washington</settlement>
+                          <region>District of Columbia (<abbr>D.C.</abbr>)</region>
+                          <country>United States of America (<abbr>U.S.A.</abbr>)</country>
+                      </placeName>
+                  </org>
+                  <org>
+                      <orgName xml:id="MORG" ref="https://lccn.loc.gov/n50071397">Morgan State College</orgName>
+                      <idno type="LCAF">n50071397</idno>
+                      <placeName>
+                          <settlement>Baltimore</settlement>
+                          <region>Maryland (<abbr>M.D.</abbr>)</region>
+                          <country>United States of America (<abbr>U.S.A.</abbr>)</country>
+                      </placeName>
+                      <note>Renamed as <orgName ref="https://lccn.loc.gov/n85066664">Morgan State University</orgName> in <date when="1975">1975</date>.</note>
+                  </org>
+                  <org>
+                      <orgName xml:id="ANNE" ref="https://lccn.loc.gov/n2001081467">University of Maryland, Eastern Shore</orgName>
+                      <idno type="LCAF">n2001081467</idno>
+                      <placeName>
+                          <settlement>Princess Anne</settlement>
+                          <region>Maryland (<abbr>M.D.</abbr>)</region>
+                          <country>United States of America (<abbr>U.S.A.</abbr>)</country>
+                      </placeName>
+                      <note>Frequently referred to by its location, Princess Anne.</note>
+                  </org>
+                  <org>
+                      <orgName xml:id="SUN" ref="https://lccn.loc.gov/no2010112182">The Baltimore Sun</orgName>
+                      <idno type="LCAF">no2010112182</idno>
+                      <placeName>
+                          <settlement>Baltimore</settlement>
+                          <region>Maryland (<abbr>M.D.</abbr>)</region>
+                          <country>United States of America (<abbr>U.S.A.</abbr>)</country>
+                      </placeName>
+                  </org>
+              </listOrg>
+              <listPerson>
+                  <person>
+                      <persName xml:id="BYRD" ref="https://lccn.loc.gov/no93017923">
+                          <forename>Harry</forename>
+                          <forename>Clifton</forename>
+                          <surname>Byrd</surname>
+                          <roleName type="office">University President, <orgName ref="#UMD">University of Maryland, College Park</orgName></roleName>
+                          <idno type="LCAF">no 93017923</idno>
+                      </persName>
+                  </person>
+                  <person>
+                      <persName xml:id="DGM" ref="https://lccn.loc.gov/n99043202">
+                          <forename>Donald</forename>
+                          <forename>Gaines</forename>
+                          <surname>Murray</surname>
+                      </persName>
+                      <idno type="LCAF">n99043202</idno>
+                  </person>
+                  <person>
+                      <persName xml:id="WBL">
+                          <roleName type="military">Major</roleName>
+                          <forename>Wilmore</forename>
+                          <surname>Leonard</surname>
+                      </persName>
+                  </person>
+                  <person>
+                      <persName xml:id="MBB">
+                          <forename>Martin</forename>
+                          <surname>Booth</surname>
+                      </persName>
+                  </person>
+                  <person>
+                      <persName xml:id="EM">
+                          <forename>Esther</forename>
+                          <surname>McCready</surname>
+                      </persName>
+                  </person>
+                  <person>
+                      <persName xml:id="HW">
+                          <forename>Hiram</forename>
+                          <surname>Whittle</surname>
+                      </persName>
+                  </person>
+                  <person>
+                      <persName xml:id="PJM" ref="https://lccn.loc.gov/n80048493">
+                          <forename>Parren</forename>
+                          <forename>James</forename>
+                          <surname>Mitchell</surname>
+                      </persName>
+                      <idno type="LCAF">n80048493</idno>
+                  </person>
+                  <personGrp>
+                      <persName xml:id="BLK">Black and African American people</persName>
+                      <note>This person group is necessary for the reading and interpretation of this text, as this text often uses "the negro" to generalize about all black and African Americans.</note>
+                  </personGrp>
+                  <personGrp>
+                      <persName xml:id="USM">University System of Maryland (<abbr>U.S.M.</abbr>) Board of Regents</persName>
+                      <note>The Board of Regents is comprised of 17 members, including 1 full-time student. Appointed by the Governor of Maryland, the Board oversees the university system's academic, administrative, and financial operations.</note>
+                  </personGrp>
+              </listPerson>
+          </particDesc>
+      </profileDesc>
+      <revisionDesc>
+          <change>No changes have been made at this time.</change> <!-- Use this space to later detail revisions to the digital text. -->
+      </revisionDesc>
+  </teiHeader> <!-- Remember that a TEI header will often be a work-in-progress as you continue to encode the text body. As you mark up the text, you may find that you need to return to the header to make an adjustment or add information. -->
+  <text>
+      <body>
+        <div>
+            <head rend="center">
+                <title type="main"><persName ref="#BLK">The Negro</persName> on campus</title>
+            </head>
+        </div>
+        <div rend="center">
+             <byline>By <persName ref="#HG">HOLLACE GOLDBERG</persName></byline>
+             <p>This is the first part in a series tracing<lb/>
+             the history of <persName ref="#BLK">the Negro</persName> at the <orgName ref="#UMD">University</orgName>.</p>
+        </div>
+        <div>
+            <p>
+             The history of <persName ref="#BLK">the Negro</persName> at the <choice><orig>Univer-
+             sity</orig><reg><orgName ref="#UMD">University</orgName></reg></choice><lb/>
+             unfolds with awesome slowness. It<lb/>
+             evolves over a <measure type="time" quantity="20" unit="year">20-year period</measure> in which<lb/>
+             court suits, financial strains and public<lb/>
+             opinion gradually open the campus gates<lb/>
+             to black Americans.
+            </p>
+            <p>
+             The first Negro to attend the <orgName ref="#UMD">University</orgName><lb/>
+             was <persName ref="#DGM">Donald Gaines Murray</persName>. A graduate<lb/>
+             of <orgName>Amherst</orgName>, <persName ref="#DGM">Murray</persName> <seg ana="#EDU">applied</seg> to the <choice><orig>Uni-
+             versity</orig><reg>University</reg></choice><lb/>
+             <orgName ref="#UMDLAW">Law School</orgName> in <date when="1935">1935</date>. By <date when="1936">1936</date> <seg corresp="#DGM">he</seg><lb/>
+             was accepted. The year’s delay in <choice><orig>Mur-
+             ray’s</orig><reg><persName corresp="#DGM">Murray's</persName></reg></choice><lb/>
+             acceptance was due to a detour his<lb/>
+             application took —a detour through the<lb/>
+             state Attorney General’s office and the<lb/>
+             <orgName>Circuit Court of Appeals</orgName>.
+            </p>
+            <p>
+             In <date when="1935">1935</date>, <persName ref="#DGM">Murray</persName> was initially refused<lb/>
+             <seg ana="#EDU">admission</seg> to the <orgName ref="#UMDLAW">University</orgName> but offered<lb/>
+             a <seg ana="#EDU">scholarship</seg> to <orgName ref="#HOW">Howard University</orgName> in<lb/>
+             <placeName><settlement>Washington</settlement>, <region><abbr>D.C.</abbr></region></placeName>, if <seg corresp="#DGM">he</seg> were accepted<lb/>
+             there. <persName ref="#DGM">Murray</persName> declined the <seg ana="#EDU">scholarship</seg><lb/>
+             offer, and instead sued the <choice><orig>Board of Re-
+             gents</orig><reg><persName ref="#USM">Board of Regents</persName></reg></choice><lb/>
+             for denying <seg corresp="#DGM">him</seg> admission “<choice><orig>be-
+             cause</orig><reg>because</reg></choice> of his color."
+            </p>
+            <p>
+             In court, the <orgName ref="#UMD">University</orgName> conceded that<lb/>
+             <persName ref="#DGM">Murray</persName> was denied admission because of<lb/>
+             his race. <seg ana="#EDU">Education</seg> in the state had <choice><orig>fol-
+             lowed</orig><reg>followed</reg></choice><lb/>
+             a separate but equal, <choice><orig>bi-racial</orig><reg>biracial</reg></choice><lb/>
+             policy. Provisions for members of the<lb/>
+             Negro race to be sent by scholarship to<lb/>
+             professional <seg ana="#EDU">schools</seg> outside the state<lb/>
+             were made. The University President<lb/>
+             <persName ref="#BYRD">H. C. Byrd</persName> further added that a “<choice><orig>finan-
+             cial</orig><reg>financial</reg></choice><lb/>
+             risk" would be involved in accepting<lb/>
+             Negroes, for if Negroes were <seg ana="#EDU">admitted</seg><lb/>
+             to the <seg corresp="#UMD">state university</seg>, it was projected<lb/>
+             that many students would withdraw.
+            </p>
+            <p>
+             Defendant <persName ref="#DGM">Murray</persName>, however, contended<lb/>
+             that a law <seg ana="#EDU">education</seg> received at <orgName ref="#HOW">Howard</orgName><lb/>
+             would not be equal nor comparable to a<lb/>
+             law <seg ana="#EDU">education</seg> gained at the <orgName ref="#UMDLAW">University</orgName>.<lb/>
+             <persName ref="#DGM">Murray</persName> intended to <seg ana="#LAB">practice law</seg> in <choice><orig>Bal-
+             timore City</orig><reg><placeName><settlement>Baltimore City</settlement></placeName></reg></choice>,<lb/>
+             and the <orgName ref="#UMDLAW">University</orgName> legal<lb/>
+             <seg ana="#EDU">curriculum</seg> included special courses in<lb/>
+             Maryland law. If he attended <orgName ref="#HOW">Howard</orgName>,<lb/>
+             <persName ref="#DGM">Murray</persName> felt <seg corresp="#DGM">he</seg> would be at a <choice><orig>disadvan-
+             tage</orig><reg>disadvantage</reg></choice><lb/> when <seg ana="#JUST">competing in a <placeName><settlement>Baltimore</settlement></placeName><lb/>
+             court with white lawyers</seg> <seg ana="#EDU">schooled</seg> in the<lb/>
+             state.
+             </p>
+             <p>
+             On the grounds that <persName ref="#DGM">Murray</persName> had been<lb/>
+             denied admission to the <orgName ref="#UMDLAW">University</orgName> due<lb/>
+             only to the color of his skin, a violation<lb/>
+             of the Fourteenth Amendment was <choice><orig>de-
+             clared</orig><reg>declared</reg></choice><lb/>
+             by the Court. <persName ref="#DGM">Murray</persName> was <choice><orig>ad-
+             mitted</orig><reg><seg ana="#EDU">admitted</seg></reg></choice><lb/>
+             to the <orgName ref="#UMDLAW">University's Law School</orgName> in<lb/>
+             fall, <date when="1936">1936</date>.
+            </p>
+        </div>
+        <div>
+            <head rend="center">
+                <title type="sub"><measure type="number" quantity="3">Three</measure> Negroes by <date when="1936">1936</date></title>
+            </head>
+        </div>
+        <div>
+            <p>
+             <persName ref="#DGM">Murray</persName>’s bold and successful <seg ana="#JUST">court<lb/>
+             fight</seg> signalled the start of other Negro<lb/>
+             advances to the gates of the <orgName ref="#UMD">University</orgName>.<lb/>
+             The <orgName ref="#UMDLAW">law school</orgName> began <seg ana="#EDU">receiving—and<lb/>
+             accepting—other Negro applications</seg>, and<lb/>
+             by <date when="1939">1939</date> there were <measure type="number" quantity="3">three</measure> Negroes <seg ana="#EDU"><choice><orig>at-
+             tending</orig><reg>attending</reg></choice><lb/>
+             law classes</seg> in <placeName><settlement>Baltimore</settlement></placeName>.
+            </p>
+            <p>
+             Although the <orgName ref="#UMDLAW">law school</orgName> now had an<lb/>
+             integrated admissions policy, for the next<lb/>
+             <measure type="time" quantity="15" unit="year">15</measure> years all other branches of the <choice><orig>Uni-
+             versity</orig><reg><orgName ref="#UMD">University</orgName></reg></choice><lb/> remained segregated. In <date when="1946">1946</date> and<lb/>
+             again in <date when="1949">1949</date>, the <orgName ref="#UMDPHARM">School of Pharmacy</orgName><lb/>
+             <seg ana="#EDU">denied admission to Negro applicants</seg>.<lb/>
+             Several Negroes applying to <choice><orig>under<lb/>
+             graduate</orig><reg>undergraduate</reg></choice><lb/>
+             classes in <orgName ref="#UMD">College Park</orgName> were<lb/>
+             also <seg ana="#EDU">refused enrollment</seg>.
+            </p>
+            <p>
+             The <orgName ref="#UMD">University</orgName>’s <seg ana="#EDU">admissions</seg> policy<lb/>
+             was clearly bi-racial: Negro <choice><orig>profes-
+             sional</orig><reg>professional</reg></choice><lb/>
+             and graduate students were <choice><orig>re-
+             ferred</orig><reg>referred</reg></choice><lb/>
+             to out-of-state Institutions on<lb/>
+             scholarship; and undergraduate <choice><orig>ap-
+             plicants</orig><reg>applicants</reg></choice><lb/>
+             were rejected and steered <choice><orig>to-<lb/>
+             ward</orig><reg>toward</reg></choice><lb/>
+             <orgName ref="#MORG">Morgan State</orgName> and <orgName ref="#ANNE">Princess Anne</orgName><lb/>
+             Colleges.
+            </p>
+        </div>
+        <div>
+            <head rend="center">
+                <title type="sub"><orgName ref="#ANNE">Princess Anne</orgName> embodied</title>
+            </head>
+        </div>
+        <div>
+            <p>
+             <orgName ref="#MORG">Morgan</orgName> and <orgName ref="#ANNE">Princess Anne</orgName> were two<lb/>
+             state-owned Negro institutions. <orgName ref="#MORG">Morgan</orgName><lb/>
+             operates apart from the <orgName ref="#UMD">University</orgName>.<lb/>
+             <choice><orig>Princess Ann</orig><reg><orgName ref="#ANNE">Princess Anne</orgName></reg></choice> was incorporated into the<lb/>
+             <orgName ref="#UMD">University</orgName> in <date when="1935">1935</date> to comply with a <choice><orig>sec-
+             tion</orig><reg>section</reg></choice><lb/>
+             on <seg ana="#EDU">Negro education</seg> in the Land Grant<lb/>
+             College. (The Morrill Act.)
+            </p>
+            <p>
+             This <seg ana="#JUST">statute</seg> required that a share of<lb/>
+             <seg ana="#LAND">land-grant allocations</seg> go to Negroes.<lb/>
+             By both annexing and recognizing <choice><orig>Prin-
+             cess Anne</orig><reg><orgName ref="#ANNE">Princess Anne</orgName></reg></choice><lb/>
+             as a land-grant college for<lb/>
+             colored students, the <orgName ref="#UMD">University</orgName> could<lb/>
+             continue to receive Federal funds granted<lb/>
+             under the act.
+            </p>
+        </div>
+        <div>
+            <head rend="center">
+                <title type="sub">Negro institution ignored</title>
+            </head>
+        </div>
+        <div>
+            <p>
+             With <orgName ref="#ANNE">Princess Anne</orgName> a part of the <choice><orig>Uni-
+             versity</orig><reg><orgName ref="#UMD">University</orgName></reg></choice>,<lb/>
+             a special fiscal policy was <choice><orig>de-
+             vised</orig><reg>devised</reg></choice><lb/>
+             for the <orgName>Eastern Shore college</orgName>.<lb/>
+             Money was to be distributed <choice><orig>proportion-
+             ately</orig><reg>proportionately</reg></choice>,<lb/>
+             on the basis of state population,<lb/>
+             between the white and Negro branches of<lb/>
+             the school. Initially, <measure type="currency" quantity="210000" unit="dollar">$210,000</measure> was poured<lb/>
+             into <orgName ref="#ANNE">Princess Anne</orgName>. Over the next <measure type="time" quantity="10" unit="year">decade</measure><lb/>
+             however, <seg corresp="#ANNE">the Negro institution</seg> was more<lb/>
+             or less ignored.
+            </p>
+            <p>
+             In <date when="1947">1947</date> an investigation of <orgName ref="#ANNE">Princess<lb/>
+             Anne</orgName> was released by the Marbury <choice><orig>Com-
+             mission</orig><reg>Commission</reg></choice>.<lb/>
+             In its final report, the <choice><orig>Com-
+             mission</orig><reg>Commission</reg></choice><lb/>
+             described the <seg corresp="#ANNE">institution</seg> as a<lb/>
+             "Jim-Crow school." Plumbing was <choice><orig>de-
+             ficient</orig><reg>deficient</reg></choice>,<lb/>
+             <seg ana="#LAND">dormitories inadequate</seg> and many<lb/>
+             buildings were of “indefinite origin."<lb/>
+             <seg ana="#EDU">Academically, <seg corresp="#ANNE">the institution</seg> was only a<lb/>
+             shadow of a college</seg>; it was unaccredited,<lb/>
+             its faculty was small, its enrollment had<lb/>
+             never surpassed <measure type="number" quantity="159">159</measure> and half of the <choice><orig>stu-
+             dent</orig><reg>student</reg></choice><lb/>
+             body came from out of state.
+            </p>
+            <p>
+             The Commission concluded that <choice><orig>Prin-
+             cess Anne</orig><reg><orgName ref="#ANNE">Princess Anne</orgName></reg></choice><lb/>
+             had proved unsuccessful as a<lb/>
+             Negro institution. It was recommended<lb/>
+             that <orgName ref="#MORG">Morgan State College</orgName>, the <seg ana="#EDU">accredited<lb/>
+             Negro school</seg> in <placeName><settlement>Baltimore</settlement></placeName>, assume <choice><orig>con-
+             trol</orig><reg>control</reg></choice><lb/>
+             of <orgName ref="#ANNE">Princess Anne</orgName>. <orgName ref="#MORG">Morgan State</orgName>, the<lb/>
+             Commission felt, had greater resources<lb/>
+             and its location would attract more Negro<lb/>
+             undergraduates than <seg corresp="#ANNE">the Somerset County<lb/>
+             school</seg> had.
+            </p>
+        </div>
+        <div>
+            <head rend="center">
+                <title type="sub"><persName ref="#BYRD">Byrd</persName> opposed to change</title>
+             </head>
+        </div>
+        <div>
+            <p>
+             This recommendation was received<lb/>
+             like a bomb by University President<lb/>
+             <persName ref="#BYRD">Byrd</persName>. A <measure type="time" quantity="2" unit="year">two-year</measure> fight began between<lb/>
+             <persName ref="#BYRD">Byrd</persName>, the <orgName>State Legislature</orgName> and the <choice><orig>com-
+             munity</orig><reg>community</reg></choice>.<lb/>
+             <persName ref="#BYRD">Byrd</persName> wanted to keep <orgName ref="#ANNE">Princess<lb/>
+             Anne</orgName> in his domain. <seg corresp="#BYRD">He</seg> made sweeping<lb/>
+             promises to <persName ref="#BLK">the Negro populace</persName> <choice><orig>concern-
+             ing</orig><reg>concerning</reg></choice><lb/>
+             the potential of <orgName ref="#ANNE">Princess Anne</orgName>. <seg corresp="#BYRD">He</seg><lb/>
+             proposed to the legislature a <measure type="currency" quantity="4000000" unit="dollar">four million<lb/>
+             doUar</measure> appropriation to rebuild and <choice><orig>re-
+             vitalize</orig><reg>revitalize</reg></choice><lb/>
+             the <seg corresp="#ANNE">Eastern Shore facilities</seg>.
+            </p>
+            <p>
+             At hearings, <persName ref="#BYRD">Byrd</persName>’s opponents noted<lb/>
+             that the <orgName ref="#UMD">University</orgName> had incorporated<lb/>
+             <orgName ref="#ANNE">Princess Anne</orgName> in <date when="1936">1936</date> but had “failed<lb/>
+             to perform its duty." A <orgName ref="#SUN">Baltimore Sun</orgName>
+            </p>
+        </div>
+        <pb/>
+        <div>
+            <head rend="center">
+                <title type="sub">Gates open slowly for <persName ref="#BLK">Negro</persName></title>
+            </head>
+        </div>
+        <div>
+            <p>
+             editorial called <orgName ref="#ANNE">Princess Anne</orgName> "a<lb/>
+             kind of Cinderella to the <choice><orig>Univer-
+             sity</orig><reg><orgName ref="#UMD">University</orgName></reg></choice>."<lb/>
+             <persName ref="#BYRD">Byrd</persName>'s effort to sustain<lb/>
+             the <seg corresp="#ANNE">institution</seg>, stated the <orgName ref="#SUN">Sun</orgName>,<lb/>
+             was an effort to stop "a threat<lb/>
+             to part of his domain," not a <choice><orig>sin-
+             cere</orig><reg>sincere</reg></choice><lb/>
+             effort for the welfare of the<lb/>
+             Negro community. Furthermore,<lb/>
+             <persName ref="#BYRD">Byrd</persName>’s move to pour <measure type="currency" quantity="4000000" unit="dollar">four million<lb/>
+             dollars</measure> into <seg corresp="#ANNE">the college</seg> was a<lb/>
+             plan to “so deeply" commit the<lb/>
+             State "to the development of <choice><orig>Prin-
+             cess Anne</orig><reg><orgName ref="#ANNE">Princess Anne</orgName></reg></choice>,<lb/>
+             that there could be no<lb/>
+             withdrawal."
+            </p>
+            <p>
+             Despite oratory, petitions,<lb/>
+             hearings and editorials in <choice><orig>op-
+             position</orig><reg>opposition</reg></choice><lb/>
+             to <persName ref="#BYRD">Byrd</persName>, the <seg corresp="#BYRD">president’s</seg><lb/>
+             wheeling and dealing in <choice><orig>Annapo-
+             lis</orig><reg><placeName><settlement>Annapolis</settlement></placeName></reg></choice><lb/>
+             brought victory to his <choice><orig>propos-
+             al</orig><reg>proposal</reg></choice>.<lb/>
+             In <date when="1949">1949</date> the Legislature <choice><orig>appro-
+             priated</orig><reg>appropriated</reg></choice><lb/>
+             <measure type="currency" quantity="300000" unit="dollar">$300,000</measure> to <seg corresp="#ANNE">the Negro<lb/>
+             institution</seg>, indicating <choice><orig>con-
+             fidence</orig><reg>confidence</reg></choice><lb/>
+             in <persName ref="#BYRD">Byrd</persName>’s continued<lb/>
+             administration of <orgName ref="#ANNE">Princess Anne</orgName>.<lb/>
+             With this and subsequent <choice><orig>appro-
+             priations</orig><reg>appropriations</reg></choice>,<lb/>
+             <persName ref="#BYRD">Byrd</persName> slowly augmented<lb/>
+             <orgName ref="#ANNE">Princess Anne</orgName>'s faculty and <choice><orig>fa-
+             cilities</orig><reg>facilities</reg></choice>.
+            </p>
+            <p>
+             While the <orgName ref="#ANNE">Princess Anne</orgName> issue<lb/>
+             was debated, the <orgName ref="#UMD">University</orgName>'s<lb/>
+             “<seg ana="#EDU">separate but equal</seg>," bi-racial<lb/>
+             philosophy pervaded its dealings.<lb/>
+             In <date when="1947">1947</date>, a Negro Air Force<lb/>
+             veteran, Major <persName ref="#WBL">Wilmore B.<lb/>
+             Leonard</persName>, had registered for<lb/>
+             graduate study in <placeName><settlement>College Park</settlement></placeName>.<lb/>
+             <seg ana="#EDU">At first <seg corresp="#WBL">he</seg> was “provisionally"<lb/>
+             accepted. Later, through, <seg corresp="#WBL">he</seg><lb/>
+             was rejected</seg>.
+            </p>
+        </div>
+        <div>
+            <head rend="center">
+                <title type="sub">Rejected due to grades</title>
+            </head>
+        </div>
+        <div>
+            <p>
+             Protesting, <seg corresp="#WBL">the veteran</seg> was<lb/>
+             told that the <orgName ref="#UMD">University</orgName> was <choice><orig>re-
+             jecting</orig><reg>rejecting</reg></choice><lb/>
+             all students <seg ana="#EDU">"accepted<lb/>
+             provisionally" that year</seg>. (<choice><orig>Pro-
+             visional</orig><reg>Provisional</reg></choice><lb/>
+             status indicated that <choice><orig>oth-
+             er</orig><reg>other</reg></choice><lb/>
+             applicants had better academic<lb/>
+             records.) Due to overcrowding<lb/>
+             in <seg corresp="#UMD">the school</seg>, students accepted<lb/>
+             on provisional bases were, at<lb/>
+             later dates, all rejected.
+            </p>
+            <p>
+             Racial issues at the graduate<lb/>
+             level lay dormant for some time<lb/>
+             after <persName ref="#WBL">Leonard</persName>’s inquiry. The<lb/>
+             following summer, however,<lb/>
+             found <persName ref="#BYRD">Byrd</persName> facing <orgName><abbr>NAACP</abbr></orgName> picket<lb/>
+             lines in the newspapers.
+            </p>
+        </div>
+        <div>
+            <head rend="center">
+                <title type="sub">Summer courses offered</title>
+            </head>
+        </div>
+        <div>
+            <p>
+             In an effort to keep <seg corresp="#UMD">College<lb/>
+             Park</seg> white, the <orgName ref="#UMD">University</orgName> was<lb/>
+             offering summer courses for<lb/>
+             Negro teachers at <orgName>Douglas High<lb/>
+             School</orgName> in <placeName><settlement>Baltimore</settlement></placeName>. The<lb/>
+             <orgName><abbr>NAACP</abbr></orgName>, angered that the <choice><orig>Univer-
+             sity</orig><reg><orgName ref="#UMD">University</orgName></reg></choice><lb/>
+             was equating <orgName>Douglas</orgName>’s <choice><orig>fa-
+             cilities</orig><reg>facilities</reg></choice><lb/>
+             with those at <seg corresp="#UMD">College<lb/>
+             Park</seg>, organized a picket line on<lb/>
+             registration day.
+            </p>
+            <p>
+             Only <measure type="number" quantity="2">two</measure> students dared to<lb/>
+             cross the line drawn by hundreds<lb/>
+             of placard-carrying marchers.<lb/>
+             The students, both Negro <choice><orig>teach-
+             ers</orig><reg>teachers</reg></choice>,<lb/>
+             <seg ana="#EDU">registered and took summer<lb/>
+             courses</seg>.
+            </p>
+            <p>
+             All summer long a verbal <choice><orig>bat-
+             tle</orig><reg>battle</reg></choice><lb/>
+             was waged between the <orgName>NAACP</orgName><lb/>
+             the <orgName>Afro-American Newspaper</orgName><lb/>
+             and <persName ref="#BYRD">Byrd</persName>. <orgName>The Afro-American</orgName>—<lb/>
+             which parenthetically noted that<lb/>
+             <persName ref="#BYRD">Dr. Byrd</persName>’s title referred to an<lb/>
+             honorary doctorate degree in<lb/>
+             philosophy—maintained that the<lb/>
+             <orgName>Douglas</orgName> classes were “<choice><orig>ludi-
+             crous</orig><reg>ludicrous</reg></choice>."<lb/>
+             For <measure type="number" quantity="2">two</measure> students, the<lb/>
+             <orgName ref="#UMD">University</orgName> was employing <measure type="number" quantity="3">three</measure><lb/>
+             teachers and <measure type="number" quantity="1">one</measure> librarian.
+            </p>
+        </div>
+        <div>
+            <head rend="center">
+                <title type="sub">'Controlled segregation’</title>
+            </head>
+        </div>
+        <div>
+            <p>
+             Unabashed, <persName ref="#BYRD">Byrd</persName> replied by<lb/>
+             emphasizing that the State of<lb/>
+             Maryland’s <seg ana="#EDU">education policy was<lb/>
+             one of “controlled segregation."</seg>
+            </p>
+            <p>
+             Following the hectic summer<lb/>
+             session, <seg ana="#JUST">the <orgName>NAACP</orgName> found itself<lb/>
+             defending <persName ref="#MBB">Martin B. Booth</persName></seg>, a<lb/>
+             Negro applicant to the <orgName ref="#UMDPHARM">Maryland<lb/>
+             School of Pharmacy</orgName>. <persName ref="#MBB">Booth</persName> had<lb/>
+             applied to the school in May of<lb/>
+             <date when="1949">1948</date> and had been <seg corresp="#EDU">rejected on<lb/>
+             the grounds that “the school has<lb/>
+             filled its quota."</seg> However, on<lb/>
+             <date when="1949-08-14">August 14</date> of that same year,<lb/>
+             Booth reapplied for admission<lb/>
+             the next, or any succeeding <choice><orig>se-
+             mester</orig><reg>semester</reg></choice>.
+            </p>
+            <p>
+             This time the <orgName ref="#UMD">University</orgName> <choice><orig>re-
+             fused</orig><reg>refused</reg></choice><lb/>
+             to pass on the Negro’s <choice><orig>ap-
+             plication</orig><reg>application</reg></choice>.<lb/>
+             Demanding some <choice><orig>ac-
+             tion</orig><reg>action</reg></choice>,<lb/>
+             <seg ana="#JUST"><persName ref="#MBB">Booth</persName> went to court</seg>, claiming<lb/>
+             that the original "rejection was<lb/>
+             based not on the time of his <choice><orig>ap-
+             plication</orig><reg>application</reg></choice>,<lb/>
+             but because of his race<lb/>
+             or color."
+            </p>
+            <p>
+             In newspaper statements, <persName ref="#BYRD">Byrd</persName><lb/>
+             responded to <persName ref="#MBB">Booth</persName>’s accusation.<lb/>
+             “We haven't turned down anybody<lb/>
+             in any school on the basis of his<lb/>
+             being a Negro," he said, <choice><orig>explain-
+             ing</orig><reg>explaining</reg></choice><lb/>
+             that the <orgName ref="#UMD">University</orgName> refers<lb/>
+             <persName ref="#BLK">Negroes</persName> to Negro institutions.
+            </p>
+        </div>
+        <div>
+            <head rend="center">
+                <title type="sub">Lost in <seg ana="#JUST">litigation</seg></title>
+            </head>
+        </div>
+        <div>
+            <p>
+             <persName ref="#MBB">Booth</persName>’s case was <seg ana="#JUST">apparently<lb/>
+             lost somewhere on the litigation<lb/>
+             ladder</seg>. The only further public<lb/>
+             record on the matter is a <choice><orig>nota-
+             tion</orig><reg>notation</reg></choice><lb/>
+             in the <persName ref="#USM">Board of Regents</persName><lb/>
+             minutes of <date when="1948-09-24">Sept. 24, 1948</date>. It was<lb/>
+             stated that "future actions" on<lb/>
+             <persName ref="#MBB">Booth</persName>’s application would be "on<lb/>
+             the advice of the (State’s) attorney<lb/>
+             general."
+            </p>
+            <p>
+             The summer of <date when="1949">1949</date> <seg ana="#JUST">abounded<lb/>
+             in suits brought against the <choice><orig>Uni-
+             versity</orig><reg><orgName ref="#UMD">University</orgName></reg></choice><lb/>
+             by Negro applicants</seg>. <measure type="number" quantity="1">One</measure><lb/>
+             applicant to the <orgName ref="#UMDPHARM">School of <choice><orig>Phar-
+             macy</orig><reg>Pharmacy</reg></choice></orgName><lb/>
+             and <measure type="number" quantity="2">two</measure> for the <orgName ref="#UMDDENT">School of<lb/>
+             Dentistry</orgName> alleged that race was<lb/>
+             the sole reason for their <choice><orig>rejec-
+             tions</orig><reg>rejections</reg></choice>.<lb/>
+             A home economics student<lb/>
+             and an engineering undergraduate<lb/>
+             were <seg ana="#EDU">refused admission to <choice><orig>under-
+             graduate</orig><reg>undergraduate</reg></choice><lb/>
+             studies at <orgName ref="#UMD">College Park</orgName></seg>.
+            </p>
+            <p>
+             <seg ana="#JUST">A total of <measure type="number" quantity="6">six</measure> suits were brought<lb/>
+             against the <orgName ref="#UMD">University</orgName></seg>, and the<lb/>
+             <persName ref="#USM">Board of Regents</persName> replied to them<lb/>
+             by stating that the <orgName ref="#UMD">University</orgName> had<lb/>
+             a “general policy of segregation.<lb/>
+             <seg ana="#EDU">Separate but equal facilities</seg>”<lb/>
+             were provided for Negro <choice><orig>appli-
+             cants</orig><reg>applicants</reg></choice><lb/>
+             who were state citizens.
+            </p>
+        </div>
+        <div>
+            <head rend="center">
+                <title type="sub">Out-of-state scholarships</title>
+            </head>
+        </div>
+        <div>
+            <p>
+             In reply to the court order of<lb/>
+             mandamus, the <orgName ref="#UMD">University</orgName> <choice><orig>of-
+             fered</orig><reg>offered</reg></choice><lb/>
+             the <measure type="number" quantity="6">six</measure> Negroes <choice><orig>admis-
+             sion</orig><reg>admission</reg></choice><lb/>
+             into <orgName ref="#MORG">Morgan State</orgName> or <choice><orig>Prin-
+             cess Anne</orig><reg><orgName ref="#ANNE">Princess Anne</orgName></reg></choice>,<lb/>
+             or <seg ana="#EDU">scholarships to<lb/>
+             out-of-state schools</seg>.
+            </p>
+            <p>
+             <seg ana="#EDU">Provisions for out-of-state<lb/>
+             scholarships</seg> were arranged by<lb/>
+             the <orgName ref="#UMD">University</orgName> in conjunction with<lb/>
+             the Southern Regional Compact.<lb/>
+             This compact was composed of<lb/>
+             <measure type="number" quantity="14">14</measure> Southern states which pooled<lb/>
+             their educational facilities. When<lb/>
+             certain programs were lacking in<lb/>
+             one state, resources from another<lb/>
+             state could be used.
+            </p>
+            <p>
+             Up until <date when="1949">1949</date>, the Regional<lb/>
+             Contracts had been, in total,<lb/>
+             awarded to <measure type="number" quantity="18">18</measure> Negroes and <measure type="number" quantity="217">217</measure><lb/>
+             whites. The Compact was not<lb/>
+             viewed as a means for thwarting<lb/>
+             integration.
+            </p>
+            <p>
+             In <date when="1949">1949</date>, however, local groups<lb/>
+             in <placeName><region>Maryland</region></placeName> charged that the <choice><orig>Uni-
+             versity</orig><reg><orgName ref="#UMD">University</orgName></reg></choice><lb/>
+             'by settling mandamus<lb/>
+             suits with out-of-state <choice><orig>scholar-
+             ship</orig><reg>scholarship</reg></choice><lb/>
+             offers' was using the <choice><orig>region-
+             al</orig><reg>regional</reg></choice><lb/>
+             compact to <seg ana="#EDU">evade equal <choice><orig>educa-
+             tion</orig><reg>education</reg></choice><lb/>
+             statutes</seg>.
+            </p>
+        </div>
+        <div>
+            <head rend="center">
+                <title type="sub">Scholarship refused</title>
+            </head>
+        </div>
+        <div>
+            <p>
+             <measure type="age" quantity="18" unit="year">Eighteen year old</measure> <persName ref="#EM">Esther <choice><orig>Mc-
+             Cready</orig><reg>McCready</reg></choice></persName>,<lb/>
+             who had applied to the<lb/>
+             <orgName ref="#UMDNURS">Maryland School of Nursing</orgName>, <choice><orig>re-
+             fused</orig><reg>refused</reg></choice><lb/>
+             a scholarship to <orgName>MeHarry<lb/>
+             Medical College</orgName> in <placeName><settlement>Nashville</settlement>,<lb/>
+             <region><abbr>Tenn.</abbr></region></placeName> <persName ref="#EM">Miss McCready</persName> claimed<lb/>
+             that she could not be required to<lb/>
+             go out of her state <seg ana="#EDU">to receive<lb/>
+             education available at home</seg>. <choice><orig>Ask-
+             ing</orig><reg>Asking</reg></choice><lb/>
+             her to leave the state due to<lb/>
+             her race was <seg ana="#JUST">denying her <choice><orig>con-
+             stitutional</orig><reg>constitutional</reg></choice><lb/>
+             rights under the <choice><orig>Four-
+             teenth</orig><reg>Fourteenth</reg></choice><lb/>
+             Amendment</seg>.
+            </p>
+            <p>
+             The <orgName ref="#UMD">University</orgName>, however, felt<lb/>
+             it had "discharged its <choice><orig>constitu-
+             tional</orig><reg>constitutional</reg></choice><lb/>
+             <seg ana="#EDU">obligation to afford equal<lb/>
+             education opportunities</seg>" by <choice><orig>of-
+             fering</orig><reg>offering</reg></choice><lb/>
+             the applicant a scholarship<lb/>
+             to <orgName>MeHarry</orgName>. In court it was even<lb/>
+             brought out that MeHarry was a<lb/>
+             school whose facilities were “<choice><orig>su-
+             perior</orig><reg>superior</reg></choice>"<lb/>
+             to <orgName ref="#UMD">Maryland</orgName>’s.
+            </p>
+            <p>
+             A lower court upheld the <choice><orig>con-
+             tention</orig><reg>contention</reg></choice><lb/>
+             of the <orgName ref="#UMD">University</orgName>. But the<lb/>
+             <orgName>Maryland Circuit Court of <choice><orig>Ap-
+             peals</orig><reg>Appeals</reg></choice></orgName><lb/>
+             reversed this decision.<lb/>
+             <seg ana="#JUST"><persName ref="#EM">Miss McCready</persName>’s rights had <choice><orig>in-
+             deed</orig><reg>indeed</reg></choice> been denied</seg>.
+            </p>
+            <p>
+             Referring to State of Missouri<lb/>
+             ex-rel. Gaines v. Canada, <seg ana="#JUST">the<lb/>
+             Court held that a scholarship to<lb/>
+             <orgName>MeHarry</orgName> “did not relieve the<lb/>
+             state of its responsibility to <choice><orig>pro-
+             vide</orig><reg>provide</reg></choice><lb/>
+             equal opportunities</seg> for <choice><orig>Ne-
+             groes</orig><reg><persName ref="#BLK">Negroes</persName></reg></choice><lb/>
+             within the boundaries of<lb/>
+             the State. By no rational means<lb/>
+             could the State extend its <choice><orig>boun-
+             daries</orig><reg>boundaries</reg></choice><lb/>
+             to <placeName><settlement>Nashville</settlement>, <region><abbr>Tenn.</abbr></region></placeName>"
+            </p>
+        </div>
+        <div>
+            <head rend="center">
+                <title type="sub"><seg ana="#JUST">Court orders</seg> admission</title>
+            </head>
+        </div>
+        <div>
+            <p>
+             The Court further held that the<lb/>
+             “regional compact <seg ana="#EDU">cannot be used<lb/>
+             to maintain a segregated system<lb/>
+             of higher education</seg>." <persName ref="#EM">Miss <choice><orig>Mc-
+             Cready</orig><reg>McCready</reg></choice></persName>’s admission to the <orgName ref="#UMDNURS"><choice><orig>Mary-
+             land</orig><reg>Maryland</reg></choice><lb/>
+             School of Nursing</orgName> was <choice><orig>or-
+             dered</orig><reg>ordered</reg></choice>.
+            </p>
+            <p>
+             Still fighting for its segregation<lb/>
+             policy, the <orgName ref="#UMD">University</orgName> <seg ana="#JUST">appealed<lb/>
+             this decision to the <orgName>Supreme<lb/>
+             Court</orgName></seg>. The High Court, however,<lb/>
+             denied certiori, and the issue was<lb/>
+             settled. <persName ref="#EM">Miss McCready</persName> became<lb/>
+             the first Negro to attend the<lb/>
+             <orgName ref="#UMDNURS">Nursing School</orgName>.
+            </p>
+            <p>
+             The implications of the case<lb/>
+             were clear. The <orgName ref="#UMD">University</orgName> would<lb/>
+             have to make its Negro <choice><orig>institu-
+             tions</orig><reg>institutions</reg></choice><lb/>
+             parallel to its white <choice><orig>insti-
+             tutions</orig><reg>institutions</reg></choice><lb/>
+             or <seg ana="#EDU">begin admtting <choice><orig>Ne-
+             groes</orig><reg><persName ref="#BLK">Negroes</persName></reg></choice><lb/>
+             to <seg corresp="#UMD">College Park</seg> and to all<lb/>
+             <placeName><settlement>Baltimore</settlement></placeName> professional schools</seg>.
+            </p>
+            <p>
+             <persName ref="#BYRD">Byrd</persName> and the Legislature <choice><orig>sup-
+             ported</orig><reg>supported</reg></choice><lb/>
+             the former alternative,<lb/>
+             i.e. <seg ana="#EDU">a “dual school system" over<lb/>
+             an integrated one</seg>. For several<lb/>
+             years, new programs were <choice><orig>in-
+             stituted</orig><reg>instituted</reg></choice><lb/>
+             and more funds were<lb/>
+             poured into <orgName ref="#ANNE">Princess Anne</orgName>. <choice><orig>How-
+             ever</orig><reg>However</reg></choice>,<lb/>
+             <seg ana="#JUST">court litigations were now<lb/>
+             travelling at a pace faster than<lb/>
+             the State's educational budget</seg>.
+            </p>
+        <div>
+            <head rend="center">
+                <title type="sub">College Park tested</title>
+            </head>
+        </div>
+        <div>
+            <p>
+             In <date when="1951">1951</date> <persName ref="#HW">Hiram T. Whittle</persName>, a <measure type="age" quantity="20" unit="year">20<lb/>
+             year old</measure> Negro who wished to<lb/>
+             transfer from <orgName ref="#MORG">Morgan State</orgName> into<lb/>
+             the <orgName ref="#UMD">College Park</orgName> engineering<lb/>
+             program, received a writ of<lb/>
+             mandamus <seg ana="#EDU">admitting <seg corresp="#HW">him</seg> to the<lb/>
+             University</seg>. The State’s attorney<lb/>
+             general advised the <persName ref="#USM">Board of <choice><orig>Re-
+             gents</orig><reg>Regents</reg></choice></persName><lb/>
+             to accept <persName ref="#HW">Whittle</persName> since<lb/>
+             <orgName ref="#UMD">College Park</orgName> housed the only<lb/>
+             state supported engineering <choice><orig>fa-
+             cilities</orig><reg>facilities</reg></choice><lb/>
+             in <placeName><region>Maryland</region></placeName>.
+            </p>
+            <p>
+             <persName ref="#HW">Whittle</persName> thereby set several<lb/>
+             precedents. He was the first<lb/>
+             Negro <seg ana="#JUST">admitted to the <orgName ref="#UMD">University</orgName><lb/>
+             without a court battle</seg>—though he<lb/>
+             did follow in the wake of the <choice><orig>Mc-<lb/>
+             Cready</orig><reg><persName ref="#EM">McCready</persName></reg></choice><lb/>
+             storm. <seg corresp="#HW">He</seg> was also the<lb/>
+             first Negro to attend classes in<lb/>
+             the <seg corresp="#UMD"><placeName><settlement>College Park</settlement></placeName> campus</seg> and to<lb/>
+             <seg ana="#LAND">live in a white dormitory</seg>.
+            </p>
+            <p>
+             At this same time, another<lb/>
+             Negro student was <seg ana="#JUST">pushing his<lb/>
+             way through the Courts</seg>. <persName ref="#PJM">Parren<lb/>
+             J. Mitchell</persName>, a graduate student<lb/>
+             in sociology, had applied to the<lb/>
+             <orgName ref="#UMD">University</orgName> in <date when="1950-08">August of 1950</date>.<lb/>
+             <persName ref="#PJM">Mitchell</persName> was <seg ana="#EDU">accepted with the<lb/>
+             tacit understanding that he attend<lb/>
+             classes in <placeName><settlement>Baltimore</settlement></placeName>--not in <placeName><settlement><choice><orig>Col-
+             lege</orig><reg>College</reg></choice><lb/>
+             Park</settlement></placeName></seg>.
+             </p>
+         </div>
+        </div>
+      </body>
+  </text>
+</TEI>

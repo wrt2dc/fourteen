@@ -1,0 +1,18 @@
+tei-teiHeader {
+border: 2px solid black;
+}
+
+tei-orig {
+    display: none;
+}
+
+tei-persName {
+    color: red;
+    font-weight: bold;
+
+}
+
+tei-orgName {
+    color: black;
+    font-style: italic;
+}
