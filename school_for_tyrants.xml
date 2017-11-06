@@ -1,0 +1,128 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/Vault/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/Vault/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main">The School for Tyrants Teaches That</title>
+            <author>
+                <persName xml:id="wrt2">Will Thomas</persName>
+                <orgName xml:id="AADHUM">African American History, Culture, and Digital Humanities (AADHum)</orgName>
+            </author>
+            <respStmt> <!-- Take note that each person/responsibility gets its own responsibility statement. Responsibility statements provide an opportunity to make visible the workflow and shared labor of a project -->
+                <resp>Encoded by</resp>
+                <persName ref="#wrt2">Will Thomas</persName>
+            </respStmt>
+            <respStmt>
+                <resp>Original TEI template provided by</resp>
+                <persName xml:id="RV">Raffaele Viglianti</persName>
+            </respStmt>
+            <funder ref="https://mellon.org">The Andrew W. Mellon Foundation</funder>
+         </titleStmt>
+         <editionStmt>
+             <edition n="1">Training edition</edition>
+         </editionStmt>
+         <extent>
+             <measure unit="pages" quantity="2">1 page of original source material</measure>
+         </extent>
+         <publicationStmt>
+             <publisher>
+                 <orgName ref="#AADHUM">African American History, Culture, and Digital Humanities (AADHum)</orgName>
+             </publisher>
+             <pubPlace>
+                 <settlement>College Park</settlement>
+                 <region>Maryland</region>
+             </pubPlace>
+             <date when="2017-11-06">06 Nov 2017</date>
+             <availability status="free"> <!-- For digital research projects, another common status may be "restricted," which would be further explained immediately below as "Available for academic research purposes only." -->
+                 <p>In the public domain.</p>
+             </availability>
+         </publicationStmt>
+         <seriesStmt>
+             <title>Ungrouped Fourteen Line Poems</title>
+             <respStmt>
+                 <resp>Compiled and edited by</resp>
+                 <persName ref="#wrt2">Will Thomas</persName>
+             </respStmt>
+         </seriesStmt>
+         <sourceDesc> <!-- Remember, this provides information about the original source(s) from which the digital text is derived. -->
+             <listBibl>
+             <biblStruct>
+                 <analytic>
+                     <title type="main">The School for Tyrants Teaches That</title>
+                     <author>
+                         <persName ref="#wrt2">Will Thomas</persName>
+                     </author>
+                 </analytic>
+             </biblStruct>
+             <bibl xml:id="wt">
+                 <title>Fourteen Line Poems from Moleskine</title>
+                 <author>
+                     <persName ref="#wrt2">Will Thomas</persName>
+                 </author>
+             </bibl>
+             <bibl>
+                 <interpGrp resp="#wt" type="idea"> <!-- Search for "interGrp" in the TEI guidelines to learn more about how we can use this element to conduct an ideational analysis!
+                     <desc>Ideational analysis of freedom.</desc>
+                     <interp xml:id="LAND">Land</interp>
+                     <interp xml:id="LAB">Labor</interp>
+                     <interp xml:id="EDU">Education</interp>
+                     <interp xml:id="REL">Relief</interp>
+                     <interp xml:id="JUST">Justice</interp> -->
+                 </interpGrp>
+             </bibl>
+             </listBibl>
+        </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+          <editorialDecl>
+              <p>All typographical errors and structural formatting (including paragraphs, column breaks, line breaks, and page jumps) in the original source have been preserved.</p>
+              <hyphenation eol="all">
+                 <p>All end-of-line hyphenation has been retained.</p>
+             </hyphenation>
+          </editorialDecl>
+          <projectDesc>
+              <p>This demonstrates TEI markup for a poem taken from a moleskine</p>
+          </projectDesc>
+      </encodingDesc>
+      <profileDesc>
+          <langUsage>
+              <language ident="en-US">United States English</language>
+          </langUsage>
+      </profileDesc>
+      <revisionDesc>
+          <change>No changes have been made at this time.</change> <!-- Use this space to later detail revisions to the digital text. -->
+      </revisionDesc>
+  </teiHeader> <!-- Remember that a TEI header will often be a work-in-progress as you continue to encode the text body. As you mark up the text, you may find that you need to return to the header to make an adjustment or add information. -->
+<text>
+   <body>
+      <lg type="stanza">
+         <lg name="inception" type="paragraph">
+            <l n="1"><seg>the school for tyrants teaches</seg>
+            <seg>   that</seg></l>
+            <l n="2">the trick is claiming</l>
+            <l n="3">the gilding reflected in your mirror</l>
+            <l n="4">is to the audience awaiting</l>
+            <l n="5">solid golden</l>
+         </lg>
+         <lg name="middle" type="paragraph">
+            <l n="6"><seg>the master's house on sand</seg>
+            <seg>   slowly sinking</seg></l>
+            <l n="7">despairs of its tools.</l>
+            <l n="8">beclouded sophistry produces</l>
+            <l n="9">precise clockwork complications</l>
+            <l n="10">generating a plausible matte painting</l>
+            <l n="11">covering the seams of the stagecraft</l>
+            <l n="12"><seg>delaying the resumption of</seg>
+            <seg>   your disbelief</seg></l>
+         </lg>
+         <lg name="end" type="paragraph">
+            <l n="13"><seg>until the echoes of the music</seg>
+            <seg>   have faded</seg></l>
+            <l n="14">and the assembly forced to disperse</l>
+         </lg>
+      </lg>
+   </body>
+</text>
