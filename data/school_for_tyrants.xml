@@ -5,14 +5,14 @@
   <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title type="main">The School for Tyrants Teaches That</title>
+            <title type="main">The School for Tyrants Teaches</title>
             <author>
                 <persName xml:id="wrt2">Will Thomas</persName>
-                <orgName xml:id="AADHUM">African American History, Culture, and Digital Humanities (AADHum)</orgName>
             </author>
             <respStmt> <!-- Take note that each person/responsibility gets its own responsibility statement. Responsibility statements provide an opportunity to make visible the workflow and shared labor of a project -->
                 <resp>Encoded by</resp>
                 <persName ref="#wrt2">Will Thomas</persName>
+                <orgName xml:id="AADHUM">African American History, Culture, and Digital Humanities (AADHum)</orgName>
             </respStmt>
             <respStmt>
                 <resp>Original TEI template provided by</resp>
@@ -21,10 +21,10 @@
             <funder ref="https://mellon.org">The Andrew W. Mellon Foundation</funder>
          </titleStmt>
          <editionStmt>
-             <edition n="1">Training edition</edition>
+             <edition n="1">Prototype edition</edition>
          </editionStmt>
          <extent>
-             <measure unit="pages" quantity="2">1 page of original source material</measure>
+             <measure unit="pages" quantity="1">1 page of original source material</measure>
          </extent>
          <publicationStmt>
              <publisher>
@@ -50,7 +50,7 @@
              <listBibl>
              <biblStruct>
                  <analytic>
-                     <title type="main">The School for Tyrants Teaches That</title>
+                     <title type="main">The School for Tyrants Teaches </title>
                      <author>
                          <persName ref="#wrt2">Will Thomas</persName>
                      </author>
@@ -100,7 +100,7 @@
       <lg type="stanza">
          <lg name="inception" type="paragraph">
             <l n="1"><seg>the school for tyrants teaches</seg>
-            <seg>   that</seg></l>
+            <seg><del type="typewriter_edit">   that</del></seg></l>
             <l n="2">the trick is claiming</l>
             <l n="3">the gilding reflected in your mirror</l>
             <l n="4">is to the audience awaiting</l>
@@ -120,7 +120,7 @@
          <lg name="end" type="paragraph">
             <l n="13"><seg>until the echoes of the music</seg>
             <seg>   have faded</seg></l>
-            <l n="14">and the assembly forced to disperse</l>
+            <l n="14">and the assembly <add type="typewriter_edit">is</add> forced to disperse.</l>
          </lg>
       </lg>
    </body>
